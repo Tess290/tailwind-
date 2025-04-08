@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Call Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <div class="flex h-screen">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-blue-950 text-white p-6 space-y-6">
+        <h1 class="text-2xl font-bold mb-8">Caro</h1>
+        <nav class="space-y-4">
+          <a href="#" class="block hover:bg-blue-800 p-2 rounded">Overview</a>
+          <a href="#" class="block hover:bg-blue-800 p-2 rounded"
+            >Call Analytics</a
+          >
+          <a href="#" class="block bg-blue-600 p-2 rounded">Call Metrics</a>
+          <a href="#" class="block hover:bg-blue-800 p-2 rounded">Reports</a>
+          <a href="#" class="block hover:bg-blue-800 p-2 rounded"
+            >Team Member</a
+          >
+          <a href="#" class="block hover:bg-blue-800 p-2 rounded">Contacts</a>
+          <a href="#" class="block hover:bg-blue-800 p-2 rounded">Companies</a>
+        </nav>
+        <div class="absolute bottom-6 left-6">
+          <div class="flex items-center gap-2">
+            <img src="tail.png" class="w-10 h-10 rounded-full" />
+            <div>
+              <p class="font-medium">Jordan Evans</p>
+              <p class="text-sm text-gray-300">emmatessi9@email.com</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- Main Content -->
+      <main class="flex-1 p-6 overflow-y-auto">
+        <!-- Top Bar: Search and Icons -->
+        <div class="flex justify-between items-center mb-6">
+          <!-- Titre du tableau de bord -->
+          <h1 class="text-2xl font-bold">Dashboard</h1>
+          <!-- Barre de recherche et icônes -->
+          <div class="flex items-center gap-4">
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Search or type a command"
+                class="pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-violet-400"
+              />
+              <svg
+                class="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010.5 18.5a7.5 7.5 0 006.15-3.85z"
+                />
+              </svg>
+            </div>
+            <button class="p-2 rounded-full hover:bg-gray-200">
+              <span class="text-xl">🌐</span>
+            </button>
+            <button class="p-2 rounded-full hover:bg-gray-200">
+              <span class="text-xl">⚙</span>
+            </button>
+          </div>
+        </div>
+        <!-- Cards -->
+        <div class="grid grid-cols-4 gap-4 mb-6">
+          <div class="bg-red-600 p-4 rounded-xl shadow text-white">
+            <p class="text-lg">Incoming Calls</p>
+            <h3 class="text-3xl font-bold">256k</h3>
+            <p class="text-sm text-blue-200">+2.5%</p>
+          </div>
+          <div class="bg-yellow-50 p-4 rounded-xl shadow text-purple-600">
+            <p class="text-lg">Answered Calls</p>
+            <h3 class="text-3xl font-bold">136k</h3>
+            <p class="text-sm text-green-500">+2.5%</p>
+          </div>
+          <div class="bg-blue-100 p-4 rounded-xl shadow text-yellow-600">
+            <p class="text-lg">Abandoned Calls</p>
+            <h3 class="text-3xl font-bold">120k</h3>
+            <p class="text-sm text-red-500">-0.5%</p>
+          </div>
+          <div class="bg-indigo-50 p-4 rounded-xl shadow text-orange-600">
+            <p class="text-lg">Total Calls</p>
+            <h3 class="text-3xl font-bold">376k</h3>
+            <p class="text-sm text-green-500">+2.5%</p>
+          </div>
+        </div>
+        <!-- Graph (placeholder) -->
+        <div class="bg-orange-50 p-6 rounded-xl shadow mb-6">
+          <h4 class="font-semibold mb-2">Overall Calls Volume</h4>
+          <div
+            class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500"
+          >
+            <img src="challenge.png" class="w-full h-full" />
+          </div>
+        </div>
+        <!-- Bottom section -->
+        <div class="grid grid-cols-2 gap-6">
+          <div class="bg-white p-4 rounded-xl shadow">
+            <h4 class="bg-yellow-50 mb-2">Best Agents This Week</h4>
+            <table class="w-full text-left text-sm">
+              <thead class="text-gray-600 border-b">
+                <tr>
+                  <th class="py-2">Agent</th>
+                  <th>Answered</th>
+                  <th>Abandoned</th>
+                  <th>Satisfaction</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b">
+                  <td class="py-2">Sadiqov</td>
+                  <td>120</td>
+                  <td>20</td>
+                  <td>43/45</td>
+                </tr>
+                <tr>
+                  <td class="py-2">Sheik Ramid</td>
+                  <td>135</td>
+                  <td>10</td>
+                  <td>45/45</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow">
+            <div class="flex justify-between items-center mb-2">
+              <h4 class="font-semibold">Calls Geography</h4>
+
+              <button class="text-sm text-blue-600 underline">
+                PDF Report
+              </button>
+            </div>
+            <div
+              class="w-full h-48 bg-orange-200 rounded-lg flex items-center justify-center text-gray-500"
+            >
+              <img src="carte.jpg" class="w-full h-full" />
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
